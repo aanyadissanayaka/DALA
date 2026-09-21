@@ -35,43 +35,43 @@ The visual direction follows a modern editorial approach with spacious layouts, 
 
 ## Project Preview
 
-![DALA Home Page](screenshots/dala-home.png)
+![DALA Home Page](src/screenshots/dala-home.png)
 
 ### Elephant Index
 
 Search, filter, sort, and explore elephants through a structured visual index.
 
-![DALA Elephant Index](screenshots/dala-elephant-index.png)
+![DALA Elephant Index](src/screenshots/dala-elephant-index.png)
 
 ### Individual Stories
 
 Profiles move beyond basic records to document the life and significance of individual elephants.
 
-![Sinha Raja Profile](screenshots/dala-sinha-raja-profile.png)
+![Sinha Raja Profile](src/screenshots/dala-sinha-raja-profile.png)
 
 ### Stories
 
 Long-form editorial storytelling connects elephants with people, places, culture, and landscapes.
 
-![DALA Stories](screenshots/dala-stories.png)
+![DALA Stories](src/screenshots/dala-stories.png)
 
 ### Visual Archive
 
 A photography-led archive preserving moments of life, connection, tradition, and place.
 
-![DALA Visual Archive](screenshots/dala-visual-archive.png)
+![DALA Visual Archive](src/screenshots/dala-visual-archive.png)
 
 ### Discover
 
 Educational experiences introduce elephant habitats, behaviour, feeding, communication, culture, and more.
 
-![DALA Discover](screenshots/dala-discover.png)
+![DALA Discover](src/screenshots/dala-discover.png)
 
 ### UNSPOKEN
 
 A focused editorial space for stories and challenges that need attention and action.
 
-![DALA UNSPOKEN](screenshots/dala-unspoken.png)
+![DALA UNSPOKEN](src/screenshots/dala-unspoken.png)
 
 ---
 
