@@ -1,0 +1,1328 @@
+/* =========================================================
+   DALA — GUARDIANS OF THE MAHAWELI
+   STORY DETAIL PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+   .mahaweli-story {
+    width: 100%;
+    overflow-x: hidden;
+    color: #2b2925;
+    background: #f3efe5;
+  }
+  
+  
+  /* =========================================================
+     SHARED STORY WIDTH
+     ========================================================= */
+  
+  .mahaweli-story__hero-inner,
+  .mahaweli-story__body-inner,
+  .mahaweli-story__section-inner,
+  .mahaweli-story__cta-inner {
+    width: min(1420px, calc(100% - 96px));
+    margin: 0 auto;
+  }
+  
+  
+  /* =========================================================
+     STORY HERO
+     ========================================================= */
+  
+  .mahaweli-story__hero {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    overflow: hidden;
+    isolation: isolate;
+    background: #19231d;
+  }
+  
+  .mahaweli-story__hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+  
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     HERO OVERLAY
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  
+    background:
+      linear-gradient(
+        90deg,
+        rgba(15, 20, 16, 0.84) 0%,
+        rgba(15, 20, 16, 0.66) 27%,
+        rgba(15, 20, 16, 0.28) 52%,
+        rgba(15, 20, 16, 0.06) 76%,
+        rgba(15, 20, 16, 0.12) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(11, 15, 12, 0.12) 0%,
+        rgba(11, 15, 12, 0.02) 52%,
+        rgba(11, 15, 12, 0.42) 100%
+      );
+  }
+  
+  
+  /* ---------------------------------------------------------
+     HERO INNER
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__hero-inner {
+    position: relative;
+    z-index: 2;
+  
+    min-height: 520px;
+    padding: 55px 0 44px;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     BREADCRUMB
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    color: rgba(255, 250, 239, 0.8);
+  
+    font-size: 0.76rem;
+    letter-spacing: 0.015em;
+  }
+  
+  .mahaweli-story__breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  
+    transition:
+      color 180ms ease,
+      opacity 180ms ease;
+  }
+  
+  .mahaweli-story__breadcrumb a:hover {
+    color: #ead48e;
+  }
+  
+  .mahaweli-story__breadcrumb a:focus-visible {
+    outline: 2px solid #ead48e;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     HERO CONTENT
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__hero-content {
+    width: min(690px, 62%);
+    margin-top: 24px;
+  }
+  
+  .mahaweli-story__hero-title {
+    margin: 0;
+  
+    color: #fffaf0;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(4rem, 5.8vw, 6.3rem);
+    font-weight: 400;
+    line-height: 0.93;
+    letter-spacing: -0.045em;
+  }
+  
+  .mahaweli-story__hero-description {
+    margin: 19px 0 0;
+  
+    color: rgba(255, 250, 240, 0.93);
+  
+    font-size: 1.08rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     HERO META
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  
+    margin-top: 25px;
+  
+    color: rgba(255, 250, 239, 0.82);
+  }
+  
+  .mahaweli-story__meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  
+    font-size: 0.69rem;
+    letter-spacing: 0.045em;
+  }
+  
+  .mahaweli-story__meta-item svg {
+    width: 17px;
+    height: 17px;
+  
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.45;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .mahaweli-story__meta-divider {
+    width: 1px;
+    height: 17px;
+  
+    background: rgba(255, 250, 239, 0.38);
+  }
+  
+  
+  /* ---------------------------------------------------------
+     HERO TAGS
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  
+    margin-top: 20px;
+  }
+  
+  .mahaweli-story__hero-tags span {
+    padding: 5px 11px;
+  
+    border: 1px solid rgba(255, 250, 239, 0.58);
+    border-radius: 3px;
+  
+    color: rgba(255, 250, 239, 0.88);
+  
+    font-size: 0.59rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+  }
+  
+  
+  /* =========================================================
+     STORY BODY
+     ========================================================= */
+  
+  .mahaweli-story__body {
+    padding: 44px 0 22px;
+  }
+  
+  .mahaweli-story__body-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 390px;
+    align-items: start;
+    gap: 48px;
+  }
+  
+  
+  /* =========================================================
+     ARTICLE
+     ========================================================= */
+  
+  .mahaweli-story__article {
+    min-width: 0;
+  }
+  
+  .mahaweli-story__article-copy {
+    max-width: 850px;
+  
+    color: #413d36;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+  
+  .mahaweli-story__article-copy p {
+    margin: 0 0 19px;
+  }
+  
+  .mahaweli-story__lead {
+    position: relative;
+  }
+  
+  .mahaweli-story__drop-cap {
+    float: left;
+  
+    margin: -11px 10px -8px 0;
+  
+    color: #181815;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 5.2rem;
+    font-weight: 400;
+    line-height: 0.92;
+  }
+  
+  
+  /* =========================================================
+     STORY QUOTE
+     ========================================================= */
+  
+  .mahaweli-story__quote {
+    position: relative;
+  
+    width: 100%;
+    min-height: 230px;
+    margin: 28px 0 0;
+    overflow: hidden;
+  
+    border-radius: 4px;
+    background: #ddd4c4;
+  }
+  
+  .mahaweli-story__quote-image {
+    position: absolute;
+    inset: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .mahaweli-story__quote-overlay {
+    position: absolute;
+    inset: 0;
+  
+    background:
+      linear-gradient(
+        90deg,
+        rgba(243, 238, 226, 0.98) 0%,
+        rgba(243, 238, 226, 0.93) 30%,
+        rgba(243, 238, 226, 0.44) 57%,
+        rgba(243, 238, 226, 0.02) 100%
+      );
+  }
+  
+  .mahaweli-story__quote-content {
+    position: relative;
+    z-index: 2;
+  
+    width: 62%;
+    margin: 0;
+    padding: 46px 50px;
+  
+    color: #39342d;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  
+  .mahaweli-story__quote-line {
+    display: block;
+  
+    width: 1px;
+    height: 90px;
+  
+    position: absolute;
+    left: 27px;
+    top: 48px;
+  
+    background: rgba(61, 53, 44, 0.55);
+  }
+  
+  .mahaweli-story__quote-content p {
+    margin: 0;
+  
+    font-size: clamp(1.15rem, 1.65vw, 1.5rem);
+    font-style: italic;
+    line-height: 1.45;
+  }
+  
+  .mahaweli-story__quote-content cite {
+    display: block;
+  
+    margin-top: 18px;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-style: normal;
+    letter-spacing: 0.08em;
+  }
+  
+  
+  /* =========================================================
+     ABOUT THIS STORY SIDEBAR
+     ========================================================= */
+  
+  .mahaweli-story__sidebar {
+    width: 100%;
+  }
+  
+  .mahaweli-story__about-card {
+    overflow: hidden;
+  
+    border: 1px solid rgba(83, 72, 58, 0.08);
+    border-radius: 5px;
+  
+    background: #eee8dc;
+  }
+  
+  .mahaweli-story__about-content {
+    padding: 24px 25px 22px;
+  }
+  
+  .mahaweli-story__about-content h2,
+  .mahaweli-story__share h2 {
+    margin: 0 0 20px;
+  
+    color: #312d27;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+  }
+  
+  .mahaweli-story__about-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    margin-bottom: 16px;
+  
+    color: #4c443a;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.83rem;
+  }
+  
+  .mahaweli-story__about-row svg {
+    flex: 0 0 auto;
+  
+    width: 17px;
+    height: 17px;
+  
+    fill: none;
+    stroke: #514438;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .mahaweli-story__about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  
+    margin-top: 20px;
+  }
+  
+  .mahaweli-story__about-tags span {
+    padding: 5px 10px;
+  
+    border-radius: 3px;
+  
+    color: #5d5144;
+    background: #ddd3c3;
+  
+    font-size: 0.57rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     LOCATION MAP
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__map {
+    position: relative;
+  
+    min-height: 330px;
+    overflow: hidden;
+  
+    border-top: 1px solid rgba(73, 61, 48, 0.08);
+  
+    background: #e9e1d3;
+  }
+  
+  .mahaweli-story__map img {
+    position: absolute;
+    inset: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    object-fit: contain;
+    object-position: center;
+  
+    background: #e9e1d3;
+  }
+  
+  .mahaweli-story__map-copy {
+    position: absolute;
+    z-index: 2;
+    top: 49px;
+    right: 22px;
+  
+    width: 115px;
+  
+    color: #443c32;
+  }
+  
+  .mahaweli-story__map-copy h3 {
+    margin: 0;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.13rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  
+  .mahaweli-story__map-line {
+    display: block;
+  
+    width: 30px;
+    height: 1px;
+    margin: 18px 0;
+  
+    background: rgba(64, 54, 43, 0.65);
+  }
+  
+  .mahaweli-story__map-copy p {
+    margin: 0;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.71rem;
+    line-height: 1.5;
+  }
+  
+  
+  /* =========================================================
+     SHARE THIS STORY
+     ========================================================= */
+  
+  .mahaweli-story__share {
+    padding: 22px 0 0;
+  }
+  
+  .mahaweli-story__share h2 {
+    margin-bottom: 13px;
+  }
+  
+  .mahaweli-story__share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  
+  .mahaweli-story__share-buttons button,
+  .mahaweli-story__share-buttons a {
+    width: 44px;
+    height: 44px;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 0;
+  
+    border: 1px solid rgba(67, 58, 47, 0.22);
+    border-radius: 50%;
+  
+    color: #3b352e;
+    background: transparent;
+  
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.93rem;
+  
+    cursor: pointer;
+  
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+  
+  .mahaweli-story__share-buttons button svg,
+  .mahaweli-story__share-buttons a svg {
+    width: 17px;
+    height: 17px;
+  
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .mahaweli-story__share-buttons button:hover,
+  .mahaweli-story__share-buttons a:hover {
+    color: #f4ead2;
+    background: #493a2d;
+    border-color: #493a2d;
+  
+    transform: translateY(-2px);
+  }
+  
+  .mahaweli-story__share-buttons button:focus-visible,
+  .mahaweli-story__share-buttons a:focus-visible {
+    outline: 2px solid #8a744d;
+    outline-offset: 3px;
+  }
+  
+  
+  /* =========================================================
+     MOMENTS FROM THE STORY
+     ========================================================= */
+  
+  .mahaweli-story__moments {
+    padding: 18px 0 42px;
+  }
+  
+  .mahaweli-story__section-heading {
+    margin-bottom: 17px;
+  }
+  
+  .mahaweli-story__section-heading span,
+  .mahaweli-story__related-header > div > span {
+    display: block;
+  
+    margin-bottom: 5px;
+  
+    color: #887554;
+  
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+  }
+  
+  .mahaweli-story__section-heading h2,
+  .mahaweli-story__related-header h2 {
+    margin: 0;
+  
+    color: #28251f;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.75rem, 2.4vw, 2.35rem);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     MOMENTS GRID
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__moments-grid {
+    height: 360px;
+  
+    display: grid;
+    grid-template-columns:
+      minmax(0, 2.05fr)
+      minmax(190px, 1fr)
+      minmax(230px, 1fr);
+    gap: 6px;
+  }
+  
+  .mahaweli-story__moment {
+    position: relative;
+  
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+  
+    border-radius: 3px;
+    background: #d5ccbc;
+  }
+  
+  .mahaweli-story__moment-stack {
+    min-width: 0;
+    min-height: 0;
+  
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px;
+  }
+  
+  .mahaweli-story__moment img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    transition: transform 420ms ease;
+  }
+  
+  .mahaweli-story__moment:hover img {
+    transform: scale(1.025);
+  }
+  
+  
+  /* ---------------------------------------------------------
+     GALLERY NAVIGATION
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__gallery-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+  
+    margin-top: 14px;
+  }
+  
+  .mahaweli-story__gallery-nav span {
+    min-width: 35px;
+  
+    color: #514a40;
+  
+    text-align: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+  
+  .mahaweli-story__gallery-nav button {
+    width: 32px;
+    height: 32px;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 0;
+  
+    border: 1px solid #3d3831;
+    border-radius: 50%;
+  
+    color: #f7f1e6;
+    background: #3d3831;
+  
+    font-size: 0.88rem;
+  
+    cursor: pointer;
+  
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      transform 180ms ease;
+  }
+  
+  .mahaweli-story__gallery-nav button:hover {
+    color: #3d3831;
+    background: transparent;
+  
+    transform: translateY(-2px);
+  }
+  
+  .mahaweli-story__gallery-nav button:focus-visible {
+    outline: 2px solid #8a744d;
+    outline-offset: 3px;
+  }
+  
+  
+  /* =========================================================
+     MORE STORIES
+     ========================================================= */
+  
+  .mahaweli-story__related {
+    padding: 10px 0 45px;
+  }
+  
+  .mahaweli-story__related-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+  
+    margin-bottom: 17px;
+  }
+  
+  .mahaweli-story__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+  
+    padding: 5px 0;
+  
+    color: #403a31;
+  
+    text-decoration: none;
+    font-size: 0.7rem;
+  
+    transition:
+      color 180ms ease,
+      gap 180ms ease;
+  }
+  
+  .mahaweli-story__view-all:hover {
+    gap: 18px;
+    color: #8a6e3e;
+  }
+  
+  .mahaweli-story__view-all:focus-visible {
+    outline: 2px solid #8a744d;
+    outline-offset: 4px;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     RELATED STORY GRID
+     --------------------------------------------------------- */
+  
+  .mahaweli-story__related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+  
+  .mahaweli-story__related-card {
+    overflow: hidden;
+  
+    border: 1px solid rgba(72, 61, 48, 0.1);
+    border-radius: 3px;
+  
+    background: rgba(255, 252, 245, 0.32);
+  
+    cursor: pointer;
+  
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease;
+  }
+  
+  .mahaweli-story__related-card:hover {
+    transform: translateY(-4px);
+  
+    border-color: rgba(111, 89, 56, 0.26);
+  
+    box-shadow: 0 12px 28px rgba(49, 41, 31, 0.09);
+  }
+  
+  .mahaweli-story__related-visual {
+    height: 135px;
+    overflow: hidden;
+  
+    background: #d8cebd;
+  }
+  
+  .mahaweli-story__related-visual img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    transition: transform 400ms ease;
+  }
+  
+  .mahaweli-story__related-card:hover
+  .mahaweli-story__related-visual img {
+    transform: scale(1.045);
+  }
+  
+  .mahaweli-story__related-copy {
+    padding: 10px 13px 11px;
+  }
+  
+  .mahaweli-story__related-copy h3 {
+    margin: 0;
+  
+    color: #302c26;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  
+  .mahaweli-story__related-copy span {
+    display: block;
+  
+    margin-top: 5px;
+  
+    color: #73685a;
+  
+    font-size: 0.56rem;
+    letter-spacing: 0.06em;
+  }
+  
+  
+  /* =========================================================
+     KINDER TOMORROW CTA
+     ========================================================= */
+  
+  .mahaweli-story__cta {
+    position: relative;
+  
+    min-height: 265px;
+    overflow: hidden;
+    isolation: isolate;
+  
+    background: #191b17;
+  }
+  
+  .mahaweli-story__cta-image {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+  
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .mahaweli-story__cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  
+    background:
+      linear-gradient(
+        90deg,
+        rgba(18, 21, 17, 0.91) 0%,
+        rgba(18, 21, 17, 0.74) 28%,
+        rgba(18, 21, 17, 0.24) 58%,
+        rgba(18, 21, 17, 0.18) 100%
+      );
+  }
+  
+  .mahaweli-story__cta-inner {
+    min-height: 265px;
+  
+    display: flex;
+    align-items: center;
+  
+    padding: 35px 0;
+  }
+  
+  .mahaweli-story__cta-content {
+    position: relative;
+    z-index: 2;
+  
+    width: min(470px, 100%);
+  }
+  
+  .mahaweli-story__cta-eyebrow {
+    display: block;
+  
+    margin-bottom: 10px;
+  
+    color: #d8bd72;
+  
+    font-size: 0.57rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+  }
+  
+  .mahaweli-story__cta-content h2 {
+    margin: 0;
+  
+    color: #f7f0e4;
+  
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.02;
+  }
+  
+  .mahaweli-story__cta-content p {
+    margin: 15px 0 0;
+  
+    color: rgba(247, 240, 228, 0.82);
+  
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+  
+  .mahaweli-story__cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+  
+    margin-top: 18px;
+    padding: 11px 18px;
+  
+    border: 1px solid rgba(246, 238, 220, 0.72);
+    border-radius: 3px;
+  
+    color: #f7f0e4;
+    background: rgba(20, 24, 19, 0.18);
+  
+    text-decoration: none;
+    font-size: 0.7rem;
+  
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+  
+  .mahaweli-story__cta-button:hover {
+    color: #29251f;
+    background: #e2ca86;
+    border-color: #e2ca86;
+  
+    transform: translateY(-2px);
+  }
+  
+  .mahaweli-story__cta-button:focus-visible {
+    outline: 2px solid #e2ca86;
+    outline-offset: 4px;
+  }
+  
+  
+  /* =========================================================
+     RESPONSIVE — LARGE TABLET
+     ========================================================= */
+  
+  @media (max-width: 1100px) {
+  
+    .mahaweli-story__hero-inner,
+    .mahaweli-story__body-inner,
+    .mahaweli-story__section-inner,
+    .mahaweli-story__cta-inner {
+      width: min(100% - 60px, 980px);
+    }
+  
+    .mahaweli-story__body-inner {
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 34px;
+    }
+  
+    .mahaweli-story__hero-content {
+      width: min(620px, 70%);
+    }
+  
+    .mahaweli-story__moments-grid {
+      height: 320px;
+  
+      grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(170px, 0.95fr)
+        minmax(210px, 0.95fr);
+    }
+  
+    .mahaweli-story__related-visual {
+      height: 120px;
+    }
+  }
+  
+  
+  /* =========================================================
+     RESPONSIVE — TABLET
+     ========================================================= */
+  
+  @media (max-width: 850px) {
+  
+    .mahaweli-story__hero {
+      min-height: 560px;
+    }
+  
+    .mahaweli-story__hero-inner {
+      min-height: 560px;
+    }
+  
+    .mahaweli-story__hero-content {
+      width: min(620px, 85%);
+    }
+  
+    .mahaweli-story__body-inner {
+      grid-template-columns: 1fr;
+    }
+  
+    .mahaweli-story__sidebar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 25px;
+    }
+  
+    .mahaweli-story__share {
+      min-width: 220px;
+      padding-top: 0;
+    }
+  
+    .mahaweli-story__moments-grid {
+      height: auto;
+  
+      grid-template-columns: 1.45fr 1fr;
+    }
+  
+    .mahaweli-story__moment--large {
+      min-height: 340px;
+    }
+  
+    .mahaweli-story__moment-stack {
+      min-height: 340px;
+    }
+  
+    .mahaweli-story__moment--tall {
+      grid-column: 1 / -1;
+      min-height: 270px;
+    }
+  
+    .mahaweli-story__related-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .mahaweli-story__related-visual {
+      height: 170px;
+    }
+  }
+  
+  
+  /* =========================================================
+     RESPONSIVE — MOBILE
+     ========================================================= */
+  
+  @media (max-width: 620px) {
+  
+    .mahaweli-story__hero-inner,
+    .mahaweli-story__body-inner,
+    .mahaweli-story__section-inner,
+    .mahaweli-story__cta-inner {
+      width: calc(100% - 36px);
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — HERO
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__hero,
+    .mahaweli-story__hero-inner {
+      min-height: 610px;
+    }
+  
+    .mahaweli-story__hero-image {
+      object-position: 60% center;
+    }
+  
+    .mahaweli-story__hero-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(14, 20, 16, 0.83) 0%,
+          rgba(14, 20, 16, 0.58) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(12, 17, 14, 0.68) 0%,
+          rgba(12, 17, 14, 0.05) 70%
+        );
+    }
+  
+    .mahaweli-story__hero-inner {
+      padding: 40px 0 42px;
+    }
+  
+    .mahaweli-story__hero-content {
+      width: 100%;
+      margin-top: 50px;
+    }
+  
+    .mahaweli-story__hero-title {
+      font-size: clamp(3.35rem, 15vw, 4.7rem);
+    }
+  
+    .mahaweli-story__hero-description {
+      font-size: 0.95rem;
+    }
+  
+    .mahaweli-story__hero-description br {
+      display: none;
+    }
+  
+    .mahaweli-story__hero-meta {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .mahaweli-story__meta-divider {
+      display: none;
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — ARTICLE
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__body {
+      padding-top: 32px;
+    }
+  
+    .mahaweli-story__article-copy {
+      font-size: 0.98rem;
+    }
+  
+    .mahaweli-story__drop-cap {
+      font-size: 4.5rem;
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — QUOTE
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__quote {
+      min-height: 285px;
+    }
+  
+    .mahaweli-story__quote-image {
+      object-position: 70% center;
+    }
+  
+    .mahaweli-story__quote-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(243, 238, 226, 0.98) 0%,
+          rgba(243, 238, 226, 0.9) 55%,
+          rgba(243, 238, 226, 0.28) 100%
+        );
+    }
+  
+    .mahaweli-story__quote-content {
+      width: 83%;
+      padding: 45px 28px 40px 43px;
+    }
+  
+    .mahaweli-story__quote-line {
+      left: 22px;
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — SIDEBAR
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__sidebar {
+      display: block;
+    }
+  
+    .mahaweli-story__share {
+      padding-top: 22px;
+    }
+  
+    .mahaweli-story__map {
+      min-height: 320px;
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — MOMENTS
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__moments {
+      padding-top: 12px;
+    }
+  
+    .mahaweli-story__moments-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .mahaweli-story__moment--large,
+    .mahaweli-story__moment-stack,
+    .mahaweli-story__moment--tall {
+      min-height: 0;
+    }
+  
+    .mahaweli-story__moment--large {
+      height: 260px;
+    }
+  
+    .mahaweli-story__moment-stack {
+      height: auto;
+  
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 190px;
+    }
+  
+    .mahaweli-story__moment--tall {
+      grid-column: auto;
+      height: 250px;
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — RELATED STORIES
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__related-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .mahaweli-story__related-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .mahaweli-story__related-visual {
+      height: 200px;
+    }
+  
+  
+    /* ---------------------------------------------------------
+       MOBILE — CTA
+       --------------------------------------------------------- */
+  
+    .mahaweli-story__cta,
+    .mahaweli-story__cta-inner {
+      min-height: 350px;
+    }
+  
+    .mahaweli-story__cta-image {
+      object-position: 58% center;
+    }
+  
+    .mahaweli-story__cta-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(17, 21, 17, 0.92) 0%,
+          rgba(17, 21, 17, 0.68) 100%
+        );
+    }
+  
+    .mahaweli-story__cta-content p br {
+      display: none;
+    }
+  }

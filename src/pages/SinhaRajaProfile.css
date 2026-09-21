@@ -1,0 +1,2865 @@
+/* =========================================================
+   DALA — SINHA RAJA PROFILE
+   =========================================================
+
+   FILE STRUCTURE
+
+   01. PAGE BASE
+   02. HERO
+       02.1 Hero Image
+       02.2 Hero Overlay
+       02.3 Hero Inner
+       02.4 Breadcrumb
+       02.5 Hero Content
+       02.6 Eyebrow
+       02.7 Title
+       02.8 Sinhala Name
+       02.9 Description
+       02.10 Actions
+       02.11 Buttons
+
+   03. HERO — RESPONSIVE
+
+   NEXT:
+   04. QUICK FACTS
+
+   IMPORTANT:
+   Edit these original sections when changes are needed.
+   Do not add duplicate override patches at the bottom.
+   ========================================================= */
+
+
+/* =========================================================
+   01. PAGE BASE
+   ========================================================= */
+
+.sinha-profile {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f7f4ee;
+    color: #171713;
+}
+
+
+/* =========================================================
+   02. HERO
+   ========================================================= */
+
+.sinha-profile-hero {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+
+    /*
+      Preserve the wide composition of the generated hero asset.
+      This prevents the elephant from being aggressively cropped.
+    */
+    aspect-ratio: 16 / 6.15;
+
+    min-height: 470px;
+    max-height: 590px;
+
+    overflow: hidden;
+
+    background: #ebe6dd;
+}
+
+/* ---------------------------------------------------------
+   02.1 HERO IMAGE
+   --------------------------------------------------------- */
+
+.sinha-profile-hero__image {
+    position: absolute;
+    inset: 0;
+
+    z-index: -3;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+      IMPORTANT:
+      The hero asset was designed as one complete composition.
+      Do not use cover here because it enlarges the image and
+      crops Sinha Raja's tusks and lower facial features.
+    */
+    object-fit: contain;
+    object-position: center center;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+     02.2 HERO OVERLAY
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg,
+            #eee9e0 0%,
+            rgba(238, 233, 224, 0.99) 20%,
+            rgba(238, 233, 224, 0.96) 31%,
+            rgba(238, 233, 224, 0.82) 40%,
+            rgba(238, 233, 224, 0.54) 49%,
+            rgba(238, 233, 224, 0.23) 58%,
+            rgba(238, 233, 224, 0.05) 69%,
+            rgba(238, 233, 224, 0) 79%);
+}
+
+
+/* ---------------------------------------------------------
+     02.3 HERO INNER
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__inner {
+    position: relative;
+    z-index: 1;
+
+    width: min(calc(100% - (var(--page-padding) * 2)),
+            var(--container-width));
+
+    height: 100%;
+
+    margin-inline: auto;
+
+    padding-top: 23px;
+    padding-bottom: 38px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------------------------------------------------------
+     02.4 BREADCRUMB
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__breadcrumb {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: rgba(58, 49, 41, 0.61);
+}
+
+.sinha-profile-hero__breadcrumb a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: color 180ms ease;
+}
+
+.sinha-profile-hero__breadcrumb a:hover {
+    color: #604936;
+}
+
+.sinha-profile-hero__breadcrumb span:last-child {
+    color: #47372b;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+     02.5 HERO CONTENT
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__content {
+    width: min(100%, 590px);
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+
+/* ---------------------------------------------------------
+     02.6 EYEBROW
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__eyebrow {
+    margin: 0 0 16px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.23em;
+
+    color: #694e39;
+}
+
+
+/* ---------------------------------------------------------
+     02.7 TITLE
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__title-group {
+    margin: 0 0 17px;
+}
+
+.sinha-profile-hero__title-group h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(4.5rem, 6.1vw, 6.6rem);
+    font-weight: 400;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.055em;
+
+    color: #191713;
+}
+
+
+/* ---------------------------------------------------------
+     02.8 SINHALA NAME
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__sinhala {
+    display: block;
+
+    margin-top: 17px;
+
+    font-size: clamp(1rem, 1.15vw, 1.18rem);
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #604a3a;
+}
+
+
+/* ---------------------------------------------------------
+     02.9 DESCRIPTION
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__description {
+    max-width: 475px;
+
+    margin: 0;
+
+    font-size: 0.93rem;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color: rgba(43, 37, 31, 0.75);
+}
+
+
+/* ---------------------------------------------------------
+     02.10 HERO ACTIONS
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__actions {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+/* ---------------------------------------------------------
+     02.11 HERO BUTTON — BASE
+     --------------------------------------------------------- */
+
+.sinha-profile-hero__button {
+    min-height: 43px;
+
+    padding: 0 19px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-family: inherit;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+
+/* PRIMARY BUTTON */
+
+.sinha-profile-hero__button--primary {
+    background: #4a382b;
+    border-color: #4a382b;
+
+    color: #f8f4ed;
+}
+
+.sinha-profile-hero__button--primary:hover {
+    background: #34271f;
+    border-color: #34271f;
+
+    transform: translateY(-1px);
+}
+
+
+/* SECONDARY BUTTON */
+
+.sinha-profile-hero__button--secondary {
+    background: rgba(247, 243, 236, 0.63);
+
+    border-color: rgba(71, 54, 42, 0.29);
+
+    color: #49382c;
+
+    backdrop-filter: blur(5px);
+}
+
+.sinha-profile-hero__button--secondary svg {
+    width: 16px;
+    height: 16px;
+
+    flex: 0 0 16px;
+}
+
+.sinha-profile-hero__button--secondary:hover {
+    background: rgba(248, 245, 239, 0.93);
+
+    border-color: rgba(71, 54, 42, 0.56);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+     03. HERO — RESPONSIVE
+     ========================================================= */
+
+
+/* ---------------------------------------------------------
+     03.1 SMALL DESKTOP
+     --------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+
+
+    .sinha-profile-hero__image {
+        object-position: 69% center;
+    }
+
+    .sinha-profile-hero__content {
+        width: min(100%, 520px);
+    }
+
+    .sinha-profile-hero__title-group h1 {
+        font-size: clamp(4.2rem, 7vw, 5.6rem);
+    }
+}
+
+
+/* ---------------------------------------------------------
+     03.2 TABLET
+     --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+
+
+    .sinha-profile-hero__image {
+        object-position: 66% center;
+    }
+
+    .sinha-profile-hero__overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(238, 233, 224, 0.99) 0%,
+                rgba(238, 233, 224, 0.97) 30%,
+                rgba(238, 233, 224, 0.81) 48%,
+                rgba(238, 233, 224, 0.39) 68%,
+                rgba(238, 233, 224, 0.08) 100%);
+    }
+
+    .sinha-profile-hero__inner {
+        padding-top: 22px;
+        padding-bottom: 34px;
+    }
+
+    .sinha-profile-hero__content {
+        width: min(100%, 440px);
+    }
+
+    .sinha-profile-hero__title-group h1 {
+        font-size: clamp(3.8rem, 9vw, 4.8rem);
+    }
+
+    .sinha-profile-hero__description {
+        max-width: 400px;
+
+        font-size: 0.86rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     03.3 MOBILE
+     --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+
+    .sinha-profile-hero__image {
+        object-position: 68% center;
+    }
+
+    .sinha-profile-hero__overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(238, 233, 224, 0.98) 0%,
+                rgba(238, 233, 224, 0.92) 45%,
+                rgba(238, 233, 224, 0.60) 73%,
+                rgba(238, 233, 224, 0.22) 100%);
+    }
+
+    .sinha-profile-hero__inner {
+        width: calc(100% - 36px);
+
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .sinha-profile-hero__breadcrumb {
+        font-size: 0.66rem;
+    }
+
+    .sinha-profile-hero__content {
+        width: min(100%, 350px);
+
+        margin-top: 76px;
+        margin-bottom: 0;
+
+        padding: 0;
+    }
+
+    .sinha-profile-hero__eyebrow {
+        margin-bottom: 13px;
+
+        font-size: 0.62rem;
+    }
+
+    .sinha-profile-hero__title-group {
+        margin-bottom: 15px;
+    }
+
+    .sinha-profile-hero__title-group h1 {
+        font-size: clamp(3.4rem, 16vw, 4.2rem);
+    }
+
+    .sinha-profile-hero__sinhala {
+        margin-top: 13px;
+
+        font-size: 0.95rem;
+    }
+
+    .sinha-profile-hero__description {
+        max-width: 320px;
+
+        font-size: 0.8rem;
+        line-height: 1.55;
+    }
+
+    .sinha-profile-hero__actions {
+        width: min(100%, 255px);
+
+        margin-top: 22px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 9px;
+    }
+
+    .sinha-profile-hero__button {
+        width: 100%;
+
+        min-height: 42px;
+    }
+}
+
+/* =========================================================
+   04. QUICK FACTS
+   ========================================================= */
+
+.sinha-profile-facts {
+    width: 100%;
+
+    background: #f5f1ea;
+
+    border-top: 1px solid rgba(70, 55, 43, 0.10);
+    border-bottom: 1px solid rgba(70, 55, 43, 0.13);
+}
+
+
+/* ---------------------------------------------------------
+     04.1 QUICK FACTS INNER
+     --------------------------------------------------------- */
+
+.sinha-profile-facts__inner {
+    width: min(calc(100% - (var(--page-padding) * 2)),
+            var(--container-width));
+
+    min-height: 82px;
+
+    margin-inline: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.55fr 0.9fr 0.9fr 1.5fr;
+
+    align-items: stretch;
+}
+
+
+/* ---------------------------------------------------------
+     04.2 INDIVIDUAL FACT
+     --------------------------------------------------------- */
+
+.sinha-profile-fact {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 17px 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* VERTICAL DIVIDERS */
+
+.sinha-profile-fact:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 22%;
+    right: 0;
+
+    width: 1px;
+    height: 56%;
+
+    background: rgba(73, 56, 44, 0.22);
+}
+
+
+/* ---------------------------------------------------------
+     04.3 ICON
+     --------------------------------------------------------- */
+
+/* ---------------------------------------------------------
+   04.3 ICONS
+   --------------------------------------------------------- */
+
+.sinha-profile-fact__icon {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #514033;
+}
+
+/* Line icons — Location, Age, Tusk Status, Known For */
+.sinha-profile-fact__icon svg {
+    width: 27px;
+    height: 27px;
+
+    display: block;
+}
+
+/* DALA elephant PNG — Status */
+.sinha-profile-fact__elephant-icon {
+    width: 44px;
+    height: 44px;
+
+    display: block;
+    object-fit: contain;
+
+    filter:
+        contrast(1.25) drop-shadow(0.18px 0 0 #514033) drop-shadow(-0.18px 0 0 #514033) drop-shadow(0 0.18px 0 #514033) drop-shadow(0 -0.18px 0 #514033);
+}
+
+/* ---------------------------------------------------------
+     04.4 TEXT
+     --------------------------------------------------------- */
+
+.sinha-profile-fact__text {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.sinha-profile-fact__label {
+    display: block;
+
+    font-size: 0.64rem;
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: rgba(40, 34, 29, 0.68);
+}
+
+.sinha-profile-fact__value {
+    display: block;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    color: #28231e;
+}
+
+
+/* =========================================================
+     05. QUICK FACTS — RESPONSIVE
+     ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sinha-profile-facts__inner {
+        grid-template-columns:
+            0.85fr 1.35fr 0.85fr 0.85fr 1.25fr;
+    }
+
+    .sinha-profile-fact {
+        padding-inline: 14px;
+
+        gap: 10px;
+    }
+
+    .sinha-profile-fact__icon {
+        width: 27px;
+        height: 27px;
+
+        flex-basis: 27px;
+    }
+
+    .sinha-profile-fact__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .sinha-profile-fact__value {
+        font-size: 0.67rem;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .sinha-profile-facts__inner {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding-block: 8px;
+    }
+
+    .sinha-profile-fact {
+        min-height: 72px;
+
+        padding: 13px 16px;
+
+        border-bottom: 1px solid rgba(73, 56, 44, 0.12);
+    }
+
+    .sinha-profile-fact::after {
+        display: none;
+    }
+
+    .sinha-profile-fact:nth-last-child(-n + 2) {
+        border-bottom: none;
+    }
+
+    .sinha-profile-fact--known {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .sinha-profile-facts__inner {
+        width: calc(100% - 32px);
+
+        grid-template-columns: 1fr;
+    }
+
+    .sinha-profile-fact,
+    .sinha-profile-fact:nth-last-child(-n + 2) {
+        min-height: 68px;
+
+        padding-inline: 4px;
+
+        border-bottom: 1px solid rgba(73, 56, 44, 0.12);
+    }
+
+    .sinha-profile-fact:last-child {
+        border-bottom: none;
+    }
+
+    .sinha-profile-fact--known {
+        grid-column: auto;
+    }
+}
+
+/* =========================================================
+   06. PROFILE CONTENT — OVERVIEW
+   ========================================================= */
+
+.sinha-profile-content {
+    width: 100%;
+
+    padding: 78px 0 48px;
+
+    background: #f7f4ee;
+
+    scroll-margin-top: 90px;
+}
+
+
+/* ---------------------------------------------------------
+     06.1 PROFILE CONTENT INNER
+     --------------------------------------------------------- */
+
+.sinha-profile-content__inner {
+    width: min(calc(100% - (var(--page-padding) * 2)),
+            var(--container-width));
+
+    margin-inline: auto;
+
+    display: grid;
+
+    /*
+      Reference-inspired three-column layout:
+      navigation | story | portrait video
+    */
+    grid-template-columns:
+        180px minmax(0, 1fr) 300px;
+
+    column-gap: clamp(42px, 5vw, 78px);
+
+    align-items: start;
+}
+
+
+/* =========================================================
+     06.2 PROFILE SIDE NAVIGATION
+     ========================================================= */
+
+.sinha-profile-sidebar {
+    position: relative;
+
+    min-width: 0;
+}
+
+.sinha-profile-sidebar__nav {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    border-left: 1px solid rgba(67, 52, 41, 0.18);
+}
+
+.sinha-profile-sidebar__link {
+    position: relative;
+
+    min-height: 42px;
+
+    padding: 0 0 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    text-decoration: none;
+
+    color: rgba(46, 39, 33, 0.56);
+
+    transition:
+        color 180ms ease,
+        padding-left 180ms ease;
+}
+
+.sinha-profile-sidebar__link:hover {
+    color: #4f3d2f;
+
+    padding-left: 21px;
+}
+
+
+/* ACTIVE SECTION */
+
+.sinha-profile-sidebar__link--active {
+    color: #3f3025;
+    font-weight: 650;
+}
+
+.sinha-profile-sidebar__link--active::before {
+    content: "";
+
+    position: absolute;
+
+    left: -1px;
+    top: 8px;
+    bottom: 8px;
+
+    width: 2px;
+
+    background: #6b503b;
+}
+
+/* ---------------------------------------------------------
+   06.2.1 SIDEBAR BRAND NOTE
+   --------------------------------------------------------- */
+
+.sinha-profile-sidebar__brand-note {
+    margin-top: 52px;
+    padding-left: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sinha-profile-sidebar__brand-line {
+    width: 1px;
+    height: 42px;
+
+    margin: 0 0 18px 17px;
+
+    background: rgba(82, 68, 52, 0.24);
+}
+
+.sinha-profile-sidebar__brand-elephant {
+    width: 42px;
+    height: 42px;
+
+    display: block;
+    object-fit: contain;
+
+    margin-bottom: 14px;
+
+    opacity: 0.58;
+}
+
+.sinha-profile-sidebar__brand-note p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.92rem;
+    font-style: italic;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: rgba(65, 54, 44, 0.62);
+}
+
+/* =========================================================
+     06.3 OVERVIEW STORY
+     ========================================================= */
+
+.sinha-profile-overview {
+    min-width: 0;
+
+    max-width: 620px;
+}
+
+
+/* EYEBROW */
+
+.sinha-profile-overview__eyebrow {
+    margin: 0 0 14px;
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.22em;
+
+    color: #70543e;
+}
+
+
+/* TITLE */
+
+.sinha-profile-overview__title {
+    max-width: 580px;
+
+    margin: 0 0 28px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.45rem, 3.2vw, 3.6rem);
+    font-weight: 400;
+
+    line-height: 1.02;
+
+    letter-spacing: -0.035em;
+
+    color: #1c1915;
+}
+
+
+/* STORY TEXT */
+
+.sinha-profile-overview__story {
+    max-width: 570px;
+}
+
+.sinha-profile-overview__story p {
+    margin: 0 0 18px;
+
+    font-size: 0.89rem;
+    font-weight: 400;
+
+    line-height: 1.78;
+
+    color: rgba(38, 33, 28, 0.75);
+}
+
+.sinha-profile-overview__story p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+     06.4 STORY HIGHLIGHT
+     ========================================================= */
+
+.sinha-profile-overview__quote {
+    position: relative;
+
+    max-width: 550px;
+
+    margin: 36px 0 0;
+    padding: 24px 28px 24px 34px;
+
+    border: 0;
+    border-left: 2px solid #765b45;
+
+    background: rgba(229, 222, 211, 0.43);
+}
+
+.sinha-profile-overview__quote-mark {
+    position: absolute;
+
+    top: 6px;
+    left: 15px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2.5rem;
+    line-height: 1;
+
+    color: rgba(100, 75, 56, 0.28);
+}
+
+.sinha-profile-overview__quote p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+    font-style: italic;
+
+    line-height: 1.65;
+
+    color: #594638;
+}
+
+
+/* =========================================================
+     06.5 STORY MEDIA
+     ========================================================= */
+
+.sinha-profile-media {
+    min-width: 0;
+
+    width: 100%;
+}
+
+
+/* MEDIA HEADING */
+
+.sinha-profile-media__heading {
+    margin-bottom: 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.sinha-profile-media__label {
+    flex: 0 0 auto;
+
+    font-size: 0.61rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.17em;
+
+    color: #654b38;
+}
+
+.sinha-profile-media__line {
+    width: 100%;
+    height: 1px;
+
+    background: rgba(74, 57, 44, 0.20);
+}
+
+
+/* ---------------------------------------------------------
+     06.6 PORTRAIT VIDEO FRAME
+     Original video: 464 × 848
+     Ratio is preserved — no forced landscape crop.
+     --------------------------------------------------------- */
+
+.sinha-profile-media__video-frame {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 464 / 848;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+
+    background: #1c1b18;
+
+    box-shadow:
+        0 18px 40px rgba(41, 33, 26, 0.10);
+}
+
+.sinha-profile-media__video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #1c1b18;
+}
+
+
+/* ---------------------------------------------------------
+     06.7 MEDIA CAPTION
+     --------------------------------------------------------- */
+
+.sinha-profile-media__caption {
+    padding-top: 13px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.sinha-profile-media__caption-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: #29231e;
+}
+
+.sinha-profile-media__caption-text {
+    font-size: 0.69rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    color: rgba(43, 36, 30, 0.58);
+}
+
+
+/* =========================================================
+     07. PROFILE CONTENT — RESPONSIVE
+     ========================================================= */
+
+
+/* ---------------------------------------------------------
+     07.1 SMALL DESKTOP
+     --------------------------------------------------------- */
+
+@media (max-width: 1150px) {
+
+    .sinha-profile-content__inner {
+        grid-template-columns:
+            150px minmax(0, 1fr) 260px;
+
+        column-gap: 38px;
+    }
+
+    .sinha-profile-overview__title {
+        font-size: clamp(2.25rem, 3.4vw, 3.1rem);
+    }
+}
+
+
+/* ---------------------------------------------------------
+     07.2 TABLET
+     --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .sinha-profile-content {
+        padding: 62px 0 76px;
+    }
+
+    .sinha-profile-content__inner {
+        grid-template-columns:
+            150px minmax(0, 1fr);
+
+        column-gap: 40px;
+        row-gap: 50px;
+    }
+
+    .sinha-profile-media {
+        grid-column: 2;
+
+        width: min(100%, 300px);
+    }
+}
+
+
+/* ---------------------------------------------------------
+     07.3 MOBILE
+     --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .sinha-profile-content {
+        padding: 46px 0 62px;
+    }
+
+    .sinha-profile-content__inner {
+        width: calc(100% - 36px);
+
+        display: block;
+    }
+
+
+    /* MOBILE SECTION NAVIGATION */
+
+    .sinha-profile-sidebar {
+        margin-bottom: 40px;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .sinha-profile-sidebar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sinha-profile-sidebar__nav {
+        position: static;
+
+        width: max-content;
+
+        flex-direction: row;
+
+        gap: 24px;
+
+        border-left: 0;
+        border-bottom: 1px solid rgba(67, 52, 41, 0.18);
+    }
+
+    .sinha-profile-sidebar__link {
+        min-height: 39px;
+
+        padding: 0 0 11px;
+
+        white-space: nowrap;
+    }
+
+    .sinha-profile-sidebar__link:hover {
+        padding-left: 0;
+    }
+
+    .sinha-profile-sidebar__link--active::before {
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+
+        width: auto;
+        height: 2px;
+    }
+
+
+    /* MOBILE OVERVIEW */
+
+    .sinha-profile-overview {
+        max-width: none;
+    }
+
+    .sinha-profile-overview__title {
+        margin-bottom: 23px;
+
+        font-size: clamp(2.35rem, 11vw, 3rem);
+    }
+
+    .sinha-profile-overview__story p {
+        font-size: 0.84rem;
+    }
+
+    .sinha-profile-overview__quote {
+        margin-top: 30px;
+
+        padding: 22px 22px 22px 30px;
+    }
+
+
+    /* MOBILE VIDEO */
+
+    .sinha-profile-media {
+        width: min(100%, 310px);
+
+        margin-top: 46px;
+        margin-inline: auto;
+    }
+}
+
+/* =========================================================
+   08. PHYSICAL FEATURES
+   ========================================================= */
+
+.sinha-physical-features {
+    width: 100%;
+
+    padding: 42px 0 72px;
+
+    background: #f7f4ee;
+
+    scroll-margin-top: 90px;
+}
+
+/* ---------------------------------------------------------
+     08.1 PHYSICAL FEATURES INNER
+     --------------------------------------------------------- */
+
+.sinha-physical-features__inner {
+    width: min(calc(100% - (var(--page-padding) * 2)),
+            var(--container-width));
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+     08.2 SECTION HEADER
+     ========================================================= */
+
+.sinha-physical-features__header {
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 48px;
+}
+
+
+/* LEFT HEADING */
+
+.sinha-physical-features__heading {
+    min-width: 0;
+}
+
+.sinha-physical-features__eyebrow {
+    margin: 0 0 13px;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.22em;
+
+    color: #70543e;
+}
+
+.sinha-physical-features__title {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.9rem, 2.35vw, 2.65rem);
+    font-weight: 400;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.03em;
+
+    color: #1d1915;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+     08.3 HEADER NOTE
+     --------------------------------------------------------- */
+
+.sinha-physical-features__note {
+    flex: 0 0 auto;
+
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+.sinha-physical-features__note-line {
+    width: 46px;
+    height: 1px;
+
+    margin-top: 9px;
+
+    display: block;
+
+    background: rgba(93, 70, 52, 0.40);
+}
+
+.sinha-physical-features__note p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.94rem;
+    font-style: italic;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: rgba(77, 59, 46, 0.70);
+}
+
+
+/* =========================================================
+     08.4 FEATURE GRID
+     ========================================================= */
+
+.sinha-physical-features__grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: clamp(12px, 1.25vw, 20px);
+}
+
+
+/* =========================================================
+     08.5 FEATURE CARD
+     ========================================================= */
+
+.sinha-feature-card {
+    min-width: 0;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------------------------------------------------------
+     08.5.1 IMAGE FRAME
+     --------------------------------------------------------- */
+
+.sinha-feature-card__image-frame {
+    position: relative;
+
+    width: 100%;
+
+    /*
+      Gives all five cards one clean visual baseline.
+      The image itself is never stretched.
+    */
+    aspect-ratio: 1.48 / 1;
+
+    overflow: hidden;
+
+    background: #ded8ce;
+}
+
+
+/* SUBTLE IMAGE EDGE */
+
+.sinha-feature-card__image-frame::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(45, 37, 31, 0.06);
+}
+
+
+/* ACTUAL FEATURE IMAGE */
+
+.sinha-feature-card__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 500ms ease,
+        filter 500ms ease;
+}
+
+
+/* VERY SMALL EDITORIAL HOVER */
+
+.sinha-feature-card:hover .sinha-feature-card__image {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+     08.6 FEATURE CARD CONTENT
+     ========================================================= */
+
+.sinha-feature-card__content {
+    position: relative;
+
+    padding: 15px 2px 0;
+}
+
+
+/* NUMBER */
+
+.sinha-feature-card__number {
+    margin-bottom: 9px;
+
+    display: block;
+
+    font-size: 0.56rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: 0.15em;
+
+    color: rgba(86, 65, 49, 0.46);
+}
+
+
+/* FEATURE NAME */
+
+.sinha-feature-card__content h3 {
+    margin: 0 0 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.04rem;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #28211c;
+}
+
+
+/* FEATURE DESCRIPTION */
+
+.sinha-feature-card__content p {
+    max-width: 220px;
+
+    margin: 0;
+
+    font-size: 0.69rem;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: rgba(45, 38, 32, 0.59);
+}
+
+
+/* =========================================================
+     08.7 SECTION DIVIDER
+     ========================================================= */
+
+.sinha-physical-features__divider {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 54px;
+
+    background: rgba(68, 53, 42, 0.14);
+}
+
+
+/* =========================================================
+     09. PHYSICAL FEATURES — RESPONSIVE
+     ========================================================= */
+
+
+/* ---------------------------------------------------------
+     09.1 SMALL DESKTOP
+     --------------------------------------------------------- */
+
+@media (max-width: 1150px) {
+
+    .sinha-physical-features {
+        padding: 68px 0 74px;
+    }
+
+    .sinha-physical-features__header {
+        margin-bottom: 34px;
+    }
+
+    .sinha-physical-features__grid {
+        gap: 12px;
+    }
+
+    .sinha-feature-card__content h3 {
+        font-size: 0.98rem;
+    }
+
+    .sinha-feature-card__content p {
+        font-size: 0.65rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     09.2 TABLET
+     --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .sinha-physical-features {
+        padding: 60px 0 68px;
+    }
+
+    .sinha-physical-features__header {
+        align-items: flex-end;
+
+        margin-bottom: 32px;
+    }
+
+    .sinha-physical-features__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 32px 18px;
+    }
+
+    .sinha-feature-card:last-child {
+        grid-column: 1 / -1;
+
+        width: calc(50% - 9px);
+    }
+
+    .sinha-feature-card__content p {
+        max-width: none;
+
+        font-size: 0.7rem;
+    }
+
+    .sinha-physical-features__divider {
+        margin-top: 46px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     09.3 MOBILE
+     --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .sinha-physical-features {
+        padding: 50px 0 58px;
+    }
+
+    .sinha-physical-features__inner {
+        width: calc(100% - 36px);
+    }
+
+
+    /* HEADER */
+
+    .sinha-physical-features__header {
+        margin-bottom: 30px;
+
+        display: block;
+    }
+
+    .sinha-physical-features__title {
+        font-size: clamp(2.25rem, 10vw, 2.9rem);
+    }
+
+
+    /* NOTE */
+
+    .sinha-physical-features__note {
+        margin-top: 24px;
+
+        padding-bottom: 0;
+    }
+
+    .sinha-physical-features__note-line {
+        width: 32px;
+    }
+
+    .sinha-physical-features__note p {
+        font-size: 0.87rem;
+    }
+
+
+    /* FEATURE GRID */
+
+    .sinha-physical-features__grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .sinha-feature-card:last-child {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    .sinha-feature-card__image-frame {
+        aspect-ratio: 1.55 / 1;
+    }
+
+    .sinha-feature-card__content {
+        padding-top: 13px;
+    }
+
+    .sinha-feature-card__number {
+        margin-bottom: 7px;
+    }
+
+    .sinha-feature-card__content h3 {
+        font-size: 1.05rem;
+    }
+
+    .sinha-feature-card__content p {
+        font-size: 0.72rem;
+    }
+
+
+    /* DIVIDER */
+
+    .sinha-physical-features__divider {
+        margin-top: 40px;
+    }
+}
+
+/* =========================================================
+   10. ROLE & SIGNIFICANCE
+   ========================================================= */
+
+.sinha-role {
+    width: 100%;
+
+    padding: 66px 0 72px;
+
+    background: #f2eee6;
+
+    scroll-margin-top: 90px;
+}
+
+.sinha-role__inner {
+    width: min(calc(100% - (var(--page-padding) * 2)),
+            var(--container-width));
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+     10.1 SECTION INTRO
+     ========================================================= */
+
+.sinha-role__intro {
+    margin-bottom: 34px;
+}
+
+.sinha-role__eyebrow {
+    margin: 0 0 12px;
+
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.22em;
+
+    color: #70543e;
+}
+
+.sinha-role__title {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 2.6vw, 2.9rem);
+    font-weight: 400;
+
+    line-height: 1.04;
+
+    letter-spacing: -0.035em;
+
+    color: #1d1915;
+}
+
+
+/* =========================================================
+     10.2 MAIN EDITORIAL LAYOUT
+     ========================================================= */
+
+.sinha-role__layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr) minmax(300px, 0.72fr);
+
+    gap: clamp(48px, 6vw, 88px);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+     10.3 CEREMONIAL VISUAL
+     ========================================================= */
+
+.sinha-role__visual {
+    min-width: 0;
+}
+
+.sinha-role__image-placeholder {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    min-height: 330px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg,
+            rgba(72, 65, 49, 0.92),
+            rgba(37, 40, 32, 0.96));
+
+    border: 1px solid rgba(62, 49, 39, 0.10);
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.sinha-role__image-placeholder span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.35rem;
+}
+
+.sinha-role__image-placeholder small {
+    margin-top: 7px;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================================
+     10.4 ROLE CONTENT
+     ========================================================= */
+
+.sinha-role__content {
+    min-width: 0;
+
+    padding-right: 8px;
+}
+
+.sinha-role__number {
+    margin-bottom: 11px;
+
+    display: block;
+
+    font-size: 0.57rem;
+    font-weight: 650;
+
+    line-height: 1;
+
+    letter-spacing: 0.17em;
+
+    color: rgba(102, 76, 56, 0.55);
+}
+
+.sinha-role__content h3 {
+    margin: 0 0 14px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.45rem, 1.8vw, 1.95rem);
+    font-weight: 400;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.025em;
+
+    color: #29221c;
+}
+
+.sinha-role__content>p,
+.sinha-role__detail p {
+    margin: 0;
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    color: rgba(46, 39, 33, 0.68);
+}
+
+
+/* =========================================================
+     10.5 SECOND ROLE BLOCK
+     ========================================================= */
+
+.sinha-role__detail {
+    margin-top: 30px;
+    padding-top: 27px;
+
+    border-top: 1px solid rgba(70, 55, 43, 0.14);
+}
+
+.sinha-role__detail h3 {
+    margin-bottom: 12px;
+
+    font-size: clamp(1.2rem, 1.45vw, 1.55rem);
+}
+
+
+/* =========================================================
+     10.6 REFLECTION
+     ========================================================= */
+
+.sinha-role__reflection {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: 32px 1fr;
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+.sinha-role__reflection-line {
+    width: 32px;
+    height: 1px;
+
+    margin-top: 10px;
+
+    background: rgba(104, 78, 58, 0.45);
+}
+
+.sinha-role__reflection p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.88rem;
+    font-style: italic;
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    color: rgba(72, 55, 43, 0.76);
+}
+
+
+/* =========================================================
+     10.8 SECTION DIVIDER
+     ========================================================= */
+
+.sinha-role__divider {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 24px;
+
+    background: rgba(68, 53, 42, 0.13);
+}
+
+
+/* =========================================================
+     11. ROLE & SIGNIFICANCE — RESPONSIVE
+     ========================================================= */
+
+
+/* ---------------------------------------------------------
+     11.1 SMALL DESKTOP
+     --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .sinha-role__layout {
+        grid-template-columns:
+            minmax(0, 1.25fr) minmax(280px, 0.75fr);
+
+        gap: 44px;
+    }
+
+    .sinha-role__image-placeholder {
+        min-height: 300px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     11.2 TABLET
+     --------------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .sinha-role {
+        padding: 58px 0 64px;
+    }
+
+    .sinha-role__layout {
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+    }
+
+    .sinha-role__visual {
+        width: 100%;
+    }
+
+    .sinha-role__image-placeholder {
+        min-height: 0;
+    }
+
+    .sinha-role__content {
+        max-width: 620px;
+
+        padding-right: 0;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     11.3 MOBILE
+     --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .sinha-role {
+        padding: 48px 0 54px;
+    }
+
+    .sinha-role__inner {
+        width: calc(100% - 36px);
+    }
+
+    .sinha-role__intro {
+        margin-bottom: 27px;
+    }
+
+    .sinha-role__title {
+        font-size: clamp(2rem, 9.5vw, 2.6rem);
+    }
+
+    .sinha-role__layout {
+        gap: 31px;
+    }
+
+    .sinha-role__image-placeholder {
+        aspect-ratio: 4 / 3;
+    }
+
+    .sinha-role__content h3 {
+        font-size: 1.5rem;
+    }
+
+    .sinha-role__content>p,
+    .sinha-role__detail p {
+        font-size: 0.76rem;
+    }
+
+    .sinha-role__detail {
+        margin-top: 26px;
+        padding-top: 24px;
+    }
+
+    .sinha-role__reflection {
+        margin-top: 27px;
+    }
+
+
+}
+
+
+/* =========================================================
+   12. LOCATION
+   ========================================================= */
+
+.sinha-location {
+    width: 100%;
+
+    padding: 64px 0 58px;
+
+    background: #f7f4ee;
+
+    scroll-margin-top: 90px;
+}
+
+.sinha-location__inner {
+    width: min(calc(100% - (var(--page-padding) * 2)),
+            var(--container-width));
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+     12.1 SECTION HEADER
+     ========================================================= */
+
+.sinha-location__header {
+    margin-bottom: 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(280px, 390px);
+
+    gap: 60px;
+
+    align-items: end;
+}
+
+.sinha-location__eyebrow {
+    margin: 0 0 11px;
+
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.22em;
+
+    color: #70543e;
+}
+
+.sinha-location__title {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 2.6vw, 2.85rem);
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+
+    color: #1d1915;
+}
+
+.sinha-location__intro {
+    max-width: 390px;
+
+    margin: 0;
+
+    font-size: 0.76rem;
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: rgba(46, 39, 33, 0.62);
+}
+
+
+/* =========================================================
+     12.2 LOCATION LAYOUT
+     ========================================================= */
+
+.sinha-location__layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr) minmax(300px, 0.68fr);
+
+    gap: clamp(42px, 5vw, 74px);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+     12.3 MAP VISUAL
+     ========================================================= */
+
+.sinha-location__visual {
+    min-width: 0;
+}
+
+.sinha-location__map-frame {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #e7e1d6;
+
+    border: 1px solid rgba(68, 53, 42, 0.10);
+}
+
+.sinha-location__map-image {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+     12.4 LOCATION DETAILS
+     ========================================================= */
+
+.sinha-location__details {
+    min-width: 0;
+}
+
+
+/* LOCATION ICON */
+
+.sinha-location__icon {
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #684f3d;
+}
+
+.sinha-location__icon svg {
+    width: 28px;
+    height: 28px;
+
+    display: block;
+}
+
+
+/* =========================================================
+     12.5 PRIMARY LOCATION
+     ========================================================= */
+
+.sinha-location__label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 0.57rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.18em;
+
+    color: rgba(92, 68, 51, 0.54);
+}
+
+.sinha-location__primary h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.65rem, 2vw, 2.1rem);
+    font-weight: 400;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.025em;
+
+    color: #29221c;
+}
+
+.sinha-location__primary p {
+    margin: 0;
+
+    font-size: 0.77rem;
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    color: rgba(43, 36, 30, 0.70);
+}
+
+
+/* =========================================================
+     12.6 DETAILS DIVIDER
+     ========================================================= */
+
+.sinha-location__details-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 26px 0;
+
+    background: rgba(70, 55, 43, 0.14);
+}
+
+
+/* =========================================================
+     12.7 PLACE & STORY
+     ========================================================= */
+
+.sinha-location__story p {
+    margin: 0;
+
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    line-height: 1.72;
+
+    color: rgba(46, 39, 33, 0.64);
+}
+
+
+/* =========================================================
+     12.8 LOCATION META
+     ========================================================= */
+
+.sinha-location__meta {
+    margin-top: 27px;
+    padding-top: 22px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    border-top: 1px solid rgba(70, 55, 43, 0.14);
+}
+
+.sinha-location__meta div {
+    min-width: 0;
+}
+
+.sinha-location__meta span {
+    margin-bottom: 6px;
+
+    display: block;
+
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.15em;
+
+    color: rgba(79, 62, 49, 0.43);
+}
+
+.sinha-location__meta strong {
+    display: block;
+
+    font-size: 0.67rem;
+    font-weight: 550;
+
+    line-height: 1.4;
+
+    color: #42362d;
+}
+
+/* =========================================================
+     13. LOCATION — RESPONSIVE
+     ========================================================= */
+
+
+/* ---------------------------------------------------------
+     13.1 SMALL DESKTOP
+     --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .sinha-location__layout {
+        grid-template-columns:
+            minmax(0, 1.2fr) minmax(280px, 0.75fr);
+
+        gap: 42px;
+    }
+
+    .sinha-location__header {
+        gap: 42px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     13.2 TABLET
+     --------------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .sinha-location {
+        padding: 56px 0 54px;
+    }
+
+    .sinha-location__header {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+        margin-bottom: 30px;
+    }
+
+    .sinha-location__intro {
+        max-width: 560px;
+    }
+
+    .sinha-location__layout {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .sinha-location__details {
+        max-width: 620px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+     13.3 MOBILE
+     --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .sinha-location {
+        padding: 46px 0 48px;
+    }
+
+    .sinha-location__inner {
+        width: calc(100% - 36px);
+    }
+
+    .sinha-location__title {
+        font-size: clamp(2rem, 9.5vw, 2.6rem);
+    }
+
+    .sinha-location__intro {
+        font-size: 0.74rem;
+    }
+
+    .sinha-location__layout {
+        gap: 29px;
+    }
+
+    .sinha-location__icon {
+        margin-bottom: 16px;
+    }
+
+    .sinha-location__primary h3 {
+        font-size: 1.65rem;
+    }
+
+    .sinha-location__meta {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    
+}
+
+/* =========================================================
+   14. CONTINUE EXPLORING
+   ========================================================= */
+
+   .sinha-explore {
+    width: 100%;
+  
+    padding: 30px 0 32px;
+  
+    background: #efebe3;
+  
+    border-top: 1px solid rgba(68, 53, 42, 0.11);
+    border-bottom: 1px solid rgba(68, 53, 42, 0.11);
+  }
+  
+  .sinha-explore__inner {
+    width: min(
+      calc(100% - (var(--page-padding) * 2)),
+      var(--container-width)
+    );
+  
+    margin-inline: auto;
+  
+    display: grid;
+  
+    grid-template-columns:
+      170px
+      minmax(0, 1fr)
+      auto;
+  
+    gap: clamp(28px, 4vw, 60px);
+  
+    align-items: center;
+  }
+  
+  
+  /* =========================================================
+     14.1 SECTION LABEL
+     ========================================================= */
+  
+  .sinha-explore__label {
+    min-width: 0;
+  }
+  
+  .sinha-explore__eyebrow {
+    display: block;
+  
+    font-size: 0.57rem;
+    font-weight: 700;
+  
+    line-height: 1.35;
+  
+    letter-spacing: 0.2em;
+  
+    color: #70543e;
+  }
+  
+  .sinha-explore__label-line {
+    width: 34px;
+    height: 1px;
+  
+    margin-top: 13px;
+  
+    display: block;
+  
+    background: rgba(102, 76, 56, 0.38);
+  }
+  
+  
+  /* =========================================================
+     14.2 STORIES
+     ========================================================= */
+  
+  .sinha-explore__stories {
+    min-width: 0;
+  
+    display: grid;
+  
+    grid-template-columns:
+      minmax(0, 1fr)
+      1px
+      minmax(0, 1fr);
+  
+    gap: clamp(20px, 2.5vw, 34px);
+  
+    align-items: center;
+  }
+  
+  
+  /* =========================================================
+     14.3 COMPACT ELEPHANT CARD
+     ========================================================= */
+  
+  .sinha-explore-card {
+    min-width: 0;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 18px;
+  
+    text-decoration: none;
+  
+    color: inherit;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     14.3.1 IMAGE
+     --------------------------------------------------------- */
+  
+  .sinha-explore-card__image-frame {
+    height: 92px;
+  
+    flex: 0 0 auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    overflow: visible;
+  }
+  
+  .sinha-explore-card__image {
+    width: auto;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: contain;
+  
+    transition: transform 400ms ease;
+  }
+  
+  
+  /* Wasana
+     Original image: 1920 × 1080
+     Aspect ratio: 16 / 9
+     --------------------------------------------------------- */
+  
+  .sinha-explore-card__image--wasana {
+    aspect-ratio: 16 / 9;
+  }
+  
+  
+  /* Pulathisi Raja
+     Original image: 1024 × 1536
+     Aspect ratio: 2 / 3
+     --------------------------------------------------------- */
+  
+  .sinha-explore-card__image--pulathisi {
+    aspect-ratio: 2 / 3;
+  }
+  
+  
+  .sinha-explore-card:hover .sinha-explore-card__image {
+    transform: scale(1.03);
+  }
+  
+  
+  /* ---------------------------------------------------------
+     14.3.2 CONTENT
+     --------------------------------------------------------- */
+  
+  .sinha-explore-card__content {
+    min-width: 0;
+  
+    flex: 1;
+  }
+  
+  .sinha-explore-card__type {
+    margin-bottom: 7px;
+  
+    display: block;
+  
+    font-size: 0.48rem;
+    font-weight: 700;
+  
+    line-height: 1;
+  
+    letter-spacing: 0.16em;
+  
+    color: rgba(100, 75, 56, 0.50);
+  }
+  
+  .sinha-explore-card__name-row {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 12px;
+  }
+  
+  .sinha-explore-card__name-row h3 {
+    margin: 0;
+  
+    font-family: Georgia, "Times New Roman", serif;
+  
+    font-size: clamp(1.15rem, 1.4vw, 1.45rem);
+    font-weight: 400;
+  
+    line-height: 1.1;
+  
+    color: #29221c;
+  }
+  
+  .sinha-explore-card__arrow {
+    flex: 0 0 auto;
+  
+    font-size: 0.9rem;
+  
+    color: #624a38;
+  
+    transition: transform 180ms ease;
+  }
+  
+  .sinha-explore-card:hover .sinha-explore-card__arrow {
+    transform: translateX(4px);
+  }
+  
+  
+  /* =========================================================
+     14.4 BETWEEN-CARD DIVIDER
+     ========================================================= */
+  
+  .sinha-explore__divider {
+    width: 1px;
+    height: 58px;
+  
+    display: block;
+  
+    background: rgba(68, 53, 42, 0.15);
+  }
+  
+  
+  /* =========================================================
+     14.5 ELEPHANT DIRECTORY
+     ========================================================= */
+  
+  .sinha-explore__directory {
+    padding-left: clamp(20px, 2vw, 32px);
+  
+    border-left: 1px solid rgba(68, 53, 42, 0.14);
+  }
+  
+  .sinha-explore__directory-link {
+    display: inline-flex;
+  
+    align-items: center;
+  
+    gap: 10px;
+  
+    white-space: nowrap;
+  
+    font-size: 0.62rem;
+    font-weight: 650;
+  
+    line-height: 1.2;
+  
+    text-decoration: none;
+  
+    color: rgba(67, 51, 40, 0.76);
+  
+    transition:
+      gap 180ms ease,
+      color 180ms ease;
+  }
+  
+  .sinha-explore__directory-link:hover {
+    gap: 14px;
+  
+    color: #2f2721;
+  }
+  
+  
+  /* =========================================================
+     15. CONTINUE EXPLORING — RESPONSIVE
+     ========================================================= */
+  
+  
+  /* ---------------------------------------------------------
+     15.1 SMALL DESKTOP / TABLET
+     --------------------------------------------------------- */
+  
+  @media (max-width: 1050px) {
+  
+    .sinha-explore__inner {
+      grid-template-columns:
+        140px
+        minmax(0, 1fr);
+  
+      gap: 28px;
+    }
+  
+    .sinha-explore-card__image-frame {
+      height: 82px;
+    }
+  
+    .sinha-explore__directory {
+      grid-column: 2;
+  
+      padding-top: 16px;
+      padding-left: 0;
+  
+      border-top: 1px solid rgba(68, 53, 42, 0.12);
+      border-left: 0;
+    }
+  }
+  
+  
+  /* ---------------------------------------------------------
+     15.2 TABLET
+     --------------------------------------------------------- */
+  
+  @media (max-width: 760px) {
+  
+    .sinha-explore {
+      padding: 28px 0;
+    }
+  
+    .sinha-explore__inner {
+      grid-template-columns: 1fr;
+  
+      gap: 22px;
+    }
+  
+    .sinha-explore__label-line {
+      margin-top: 10px;
+    }
+  
+    .sinha-explore__stories {
+      grid-template-columns: 1fr;
+  
+      gap: 16px;
+    }
+  
+    .sinha-explore__divider {
+      width: 100%;
+      height: 1px;
+    }
+  
+    .sinha-explore-card__image-frame {
+      height: 78px;
+    }
+  
+    .sinha-explore__directory {
+      grid-column: auto;
+  
+      padding-top: 17px;
+      padding-left: 0;
+  
+      border-top: 1px solid rgba(68, 53, 42, 0.12);
+      border-left: 0;
+    }
+  }
+  
+  
+  /* ---------------------------------------------------------
+     15.3 MOBILE
+     --------------------------------------------------------- */
+  
+  @media (max-width: 650px) {
+  
+    .sinha-explore {
+      padding: 25px 0 27px;
+    }
+  
+    .sinha-explore__inner {
+      width: calc(100% - 36px);
+    }
+  
+    .sinha-explore-card {
+      gap: 15px;
+    }
+  
+    .sinha-explore-card__image-frame {
+      height: 70px;
+    }
+  
+    .sinha-explore-card__name-row h3 {
+      font-size: 1.18rem;
+    }
+  }

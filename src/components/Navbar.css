@@ -1,0 +1,517 @@
+/* =========================================================
+   DALA NAVBAR
+   Neutral Glass Navigation
+   ========================================================= */
+
+   .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    width: 100%;
+    height: 74px;
+  
+    background: rgba(24, 27, 24, 0.76);
+    border-bottom: 1px solid rgba(248, 245, 238, 0.16);
+  
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  
+    color: #f8f5ee;
+  
+    transition:
+      background-color 320ms ease,
+      border-color 320ms ease,
+      box-shadow 320ms ease,
+      color 320ms ease;
+  }
+  
+  
+  /* =========================================================
+     INNER LAYOUT
+     ========================================================= */
+  
+  .navbar__inner {
+    width: min(calc(100% - 96px), 1600px);
+    height: 100%;
+    margin-inline: auto;
+  
+    display: grid;
+    grid-template-columns: 225px minmax(0, 1fr) 315px;
+    align-items: center;
+    column-gap: 30px;
+  }
+  
+  
+  /* =========================================================
+     BRAND
+     ========================================================= */
+  
+  .navbar__brand {
+    width: fit-content;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .navbar__logo {
+    display: block;
+    width: 128px;
+    height: auto;
+    object-fit: contain;
+  
+    /*
+     * Current logo is designed for the light navbar.
+     * This gives it a soft ivory treatment over dark glass.
+     */
+    filter: brightness(0) invert(1);
+    opacity: 0.96;
+  
+    transition:
+      filter 320ms ease,
+      opacity 220ms ease;
+  }
+  
+  .navbar__tagline {
+    display: block;
+  
+    margin-top: 3px;
+    margin-left: 1px;
+  
+    color: rgba(248, 245, 238, 0.72);
+  
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    font-weight: 500;
+    line-height: 1;
+  
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  
+    transition: color 320ms ease;
+  }
+  
+  
+  /* =========================================================
+     MAIN NAVIGATION
+     ========================================================= */
+  
+  .navbar__nav {
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    gap: clamp(24px, 2.15vw, 42px);
+  }
+  
+  .navbar__nav a {
+    position: relative;
+  
+    padding: 28px 0 27px;
+  
+    color: rgba(248, 245, 238, 0.82);
+  
+    font-family: "Inter", sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1;
+  
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    text-decoration: none;
+  
+    transition:
+      color 220ms ease,
+      opacity 220ms ease;
+  }
+  
+  
+  /* Active / hover underline */
+  
+  .navbar__nav a::after {
+    content: "";
+  
+    position: absolute;
+    left: 50%;
+    bottom: 19px;
+  
+    width: 18px;
+    height: 1px;
+  
+    background: rgba(248, 245, 238, 0.9);
+  
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+  
+    transition: transform 220ms ease;
+  }
+  
+  .navbar__nav a:hover {
+    color: #ffffff;
+  }
+  
+  .navbar__nav a:hover::after {
+    transform: translateX(-50%) scaleX(0.65);
+  }
+  
+  .navbar__nav a.navbar__link--active {
+    color: #ffffff;
+  }
+  
+  .navbar__nav a.navbar__link--active::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  
+  /* =========================================================
+     ACTIONS
+     ========================================================= */
+  
+  .navbar__actions {
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+    gap: 9px;
+  }
+  
+  .navbar__icon-button {
+    width: 34px;
+    height: 34px;
+  
+    padding: 7px;
+  
+    display: grid;
+    place-items: center;
+  
+    border: 1px solid transparent;
+    border-radius: 50%;
+  
+    background: transparent;
+    color: rgba(248, 245, 238, 0.88);
+  
+    cursor: pointer;
+  
+    transition:
+      color 220ms ease,
+      background-color 220ms ease,
+      border-color 220ms ease,
+      transform 220ms ease;
+  }
+  
+  .navbar__icon-button svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .navbar__icon-button:hover {
+    color: #ffffff;
+  
+    background: rgba(248, 245, 238, 0.08);
+    border-color: rgba(248, 245, 238, 0.12);
+  
+    transform: translateY(-1px);
+  }
+  
+  
+  /* =========================================================
+     KINDER TOMORROW CTA
+     ========================================================= */
+  
+  .navbar__cta {
+    min-width: 166px;
+    min-height: 38px;
+  
+    margin-left: 7px;
+    padding: 9px 14px 9px 17px;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    gap: 18px;
+  
+    border: 1px solid rgba(248, 245, 238, 0.22);
+    border-radius: 999px;
+  
+    background: rgba(248, 245, 238, 0.94);
+    color: #292c27;
+  
+    font-family: "Inter", sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    line-height: 1;
+  
+    letter-spacing: 0.005em;
+    white-space: nowrap;
+    text-decoration: none;
+  
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  
+    transition:
+      background-color 220ms ease,
+      color 220ms ease,
+      border-color 220ms ease,
+      transform 220ms ease,
+      box-shadow 220ms ease;
+  }
+  
+  .navbar__cta-arrow {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  
+    transition: transform 220ms ease;
+  }
+  
+  .navbar__cta:hover {
+    background: #ffffff;
+    color: #1f231f;
+  
+    transform: translateY(-1px);
+  
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.13);
+  }
+  
+  .navbar__cta:hover .navbar__cta-arrow {
+    transform: translateX(3px);
+  }
+  
+  
+  /* =========================================================
+     SCROLLED STATE
+     Warm Mineral Light
+     ========================================================= */
+  
+  .navbar.navbar--scrolled {
+    background: rgba(247, 244, 238, 0.94);
+  
+    border-bottom-color: rgba(31, 38, 34, 0.09);
+  
+    color: #222923;
+  
+    box-shadow:
+      0 1px 0 rgba(31, 38, 34, 0.025),
+      0 7px 28px rgba(31, 38, 34, 0.055);
+  }
+  
+  .navbar--scrolled .navbar__logo {
+    filter: none;
+    opacity: 1;
+  }
+  
+  .navbar--scrolled .navbar__tagline {
+    color: rgba(34, 41, 35, 0.62);
+  }
+  
+  .navbar--scrolled .navbar__nav a {
+    color: rgba(34, 41, 35, 0.72);
+  }
+  
+  .navbar--scrolled .navbar__nav a:hover,
+  .navbar--scrolled .navbar__nav a.navbar__link--active {
+    color: #202720;
+  }
+  
+  .navbar--scrolled .navbar__nav a::after {
+    background: #394239;
+  }
+  
+  .navbar--scrolled .navbar__icon-button {
+    color: #2b332c;
+  }
+  
+  .navbar--scrolled .navbar__icon-button:hover {
+    color: #171c18;
+  
+    background: rgba(37, 46, 39, 0.055);
+    border-color: rgba(37, 46, 39, 0.08);
+  }
+  
+  .navbar--scrolled .navbar__cta {
+    background: #343a32;
+    color: #f8f5ee;
+  
+    border-color: #343a32;
+  
+    box-shadow: none;
+  }
+  
+  .navbar--scrolled .navbar__cta:hover {
+    background: #252b25;
+    color: #ffffff;
+  
+    border-color: #252b25;
+  
+    box-shadow: 0 7px 18px rgba(31, 38, 32, 0.12);
+  }
+  
+  
+  /* =========================================================
+     LARGE DESKTOP
+     ========================================================= */
+  
+  @media (min-width: 1600px) {
+  
+    .navbar__inner {
+      width: min(calc(100% - 110px), 1680px);
+  
+      grid-template-columns:
+        235px
+        minmax(0, 1fr)
+        325px;
+    }
+  
+    .navbar__logo {
+      width: 132px;
+    }
+  
+    .navbar__nav {
+      gap: clamp(34px, 2.45vw, 50px);
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     LAPTOP / SMALL DESKTOP
+     ========================================================= */
+  
+  @media (max-width: 1200px) {
+  
+    .navbar__inner {
+      width: calc(100% - 48px);
+  
+      grid-template-columns:
+        170px
+        minmax(0, 1fr)
+        auto;
+  
+      column-gap: 18px;
+    }
+  
+    .navbar__logo {
+      width: 112px;
+    }
+  
+    .navbar__tagline {
+      font-size: 5.6px;
+      letter-spacing: 0.075em;
+    }
+  
+    .navbar__nav {
+      gap: 18px;
+    }
+  
+    .navbar__nav a {
+      font-size: 10.5px;
+    }
+  
+    .navbar__cta {
+      display: none;
+    }
+  
+    .navbar__actions {
+      gap: 5px;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     TABLET
+     ========================================================= */
+  
+  @media (max-width: 900px) {
+  
+    .navbar {
+      height: 68px;
+    }
+  
+    .navbar__inner {
+      width: calc(100% - 36px);
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      gap: 16px;
+    }
+  
+    .navbar__brand {
+      flex-shrink: 0;
+    }
+  
+    .navbar__logo {
+      width: 108px;
+    }
+  
+    .navbar__tagline {
+      font-size: 5.1px;
+    }
+  
+    .navbar__nav {
+      display: none;
+    }
+  
+    .navbar__actions {
+      width: auto;
+      margin-left: auto;
+    }
+  
+    .navbar__icon-button {
+      width: 34px;
+      height: 34px;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  
+  @media (max-width: 480px) {
+  
+    .navbar {
+      height: 64px;
+    }
+  
+    .navbar__inner {
+      width: calc(100% - 28px);
+    }
+  
+    .navbar__logo {
+      width: 98px;
+    }
+  
+    .navbar__tagline {
+      margin-top: 2px;
+  
+      font-size: 4.6px;
+      letter-spacing: 0.055em;
+    }
+  
+    .navbar__icon-button {
+      width: 31px;
+      height: 31px;
+      padding: 6px;
+    }
+  
+    .navbar__icon-button svg {
+      width: 17px;
+      height: 17px;
+    }
+  
+  }
