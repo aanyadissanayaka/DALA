@@ -1,10 +1,6 @@
 /* =========================================================
    DALA — DISCOVER PAGE
-
-   IMPORTANT:
-   Navbar and HomeFooter styles DO NOT live in this file.
-   This stylesheet controls Discover page content only.
-   ========================================================= */
+ ========================================================= */
 
 
 /* =========================================================
@@ -83,7 +79,6 @@
   
   /* =========================================================
      04. DISCOVER BUTTONS
-     Explicit text/icon colours prevent global CSS conflicts.
      ========================================================= */
   
   .discover-button {
@@ -870,10 +865,7 @@
 
   padding: 11px 14px;
 
-  /*
-   * Keeps the title at the bottom of the image,
-   * while lifting only the audio player above it.
-   */
+  
   margin-bottom: 78px;
 
   color: var(--discover-dark);
@@ -1034,7 +1026,6 @@
 }
   /* =========================================================
      11. PEOPLE & ELEPHANTS CAN COEXIST
-     Rebuilt as an independent section
      ========================================================= */
   
   .discover-coexistence {
@@ -1159,7 +1150,6 @@
   
   /* =========================================================
      12. CULTURE + CONSERVATION
-     Completely separate section
      ========================================================= */
   
   .discover-knowledge {

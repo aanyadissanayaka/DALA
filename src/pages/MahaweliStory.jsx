@@ -150,7 +150,7 @@ function MahaweliStory() {
         try {
             await navigator.clipboard.writeText(window.location.href)
         } catch {
-            // Clipboard access may not be available in every browser.
+            
         }
     }
 

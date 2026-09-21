@@ -51,9 +51,6 @@ const archiveFilters = [
 
 /* =========================================================
    ARCHIVE IMAGE DATA
-
-   Photographer credits are intentionally left blank where
-   the exact photographer has not yet been verified.
    ========================================================= */
 
 const archiveImages = [

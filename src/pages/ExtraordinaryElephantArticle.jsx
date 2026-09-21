@@ -524,7 +524,6 @@ function ExtraordinaryElephantArticle() {
 
               {/* =============================================
                   DID YOU KNOW?
-                  Reusable CSS-only editorial component
               ============================================== */}
 
               <section className="discover-article__fact">
@@ -613,7 +612,6 @@ function ExtraordinaryElephantArticle() {
 
               {/* =============================================
                   A KINDER TOMORROW
-                  Reusable CSS-only editorial component
               ============================================== */}
 
               <section className="discover-article__promise">

@@ -139,7 +139,6 @@ function FoodFeedingArticle() {
         try {
             await navigator.clipboard.writeText(window.location.href)
         } catch {
-            // Clipboard access may be unavailable in some browsers.
         }
     }
 

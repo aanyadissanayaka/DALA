@@ -100,7 +100,7 @@ const storyCategories = [
 
 
 /* =========================================================
-   LATEST STORIES DATA
+   STORIES DATA
    ========================================================= */
 
 const latestStories = [

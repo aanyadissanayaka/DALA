@@ -22,10 +22,6 @@
 
    NEXT:
    04. QUICK FACTS
-
-   IMPORTANT:
-   Edit these original sections when changes are needed.
-   Do not add duplicate override patches at the bottom.
    ========================================================= */
 
 
@@ -52,10 +48,7 @@
 
     width: 100%;
 
-    /*
-      Preserve the wide composition of the generated hero asset.
-      This prevents the elephant from being aggressively cropped.
-    */
+   
     aspect-ratio: 16 / 6.15;
 
     min-height: 470px;
@@ -79,12 +72,6 @@
     width: 100%;
     height: 100%;
 
-    /*
-      IMPORTANT:
-      The hero asset was designed as one complete composition.
-      Do not use cover here because it enlarges the image and
-      crops Sinha Raja's tusks and lower facial features.
-    */
     object-fit: contain;
     object-position: center center;
 
@@ -592,9 +579,7 @@
 }
 
 
-/* ---------------------------------------------------------
-     04.3 ICON
-     --------------------------------------------------------- */
+
 
 /* ---------------------------------------------------------
    04.3 ICONS
@@ -1081,8 +1066,6 @@
 
 /* ---------------------------------------------------------
      06.6 PORTRAIT VIDEO FRAME
-     Original video: 464 × 848
-     Ratio is preserved — no forced landscape crop.
      --------------------------------------------------------- */
 
 .sinha-profile-media__video-frame {
@@ -1453,10 +1436,7 @@
 
     width: 100%;
 
-    /*
-      Gives all five cards one clean visual baseline.
-      The image itself is never stretched.
-    */
+  
     aspect-ratio: 1.48 / 1;
 
     overflow: hidden;

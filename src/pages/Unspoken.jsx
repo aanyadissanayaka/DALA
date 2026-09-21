@@ -5,7 +5,7 @@ import unspokenHero from '../assets/unspoken/unspoken-hero.png'
 import elephantProfilesIcon from '../assets/icons/icon-elephant-profiles.png'
 
 /* =========================================================
-   CURRENT ATTENTION IMAGES
+    ATTENTION IMAGES
 ========================================================= */
 
 import hakkaPatasImage from '../assets/unspoken/unspoken-attention-hakka-patas.png'

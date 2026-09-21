@@ -208,7 +208,6 @@ function Discover() {
 
       {/* ===================================================
           EXISTING NAVBAR
-          No navbar styling lives in Discover.css
       ==================================================== */}
 
       <Navbar />
@@ -571,7 +570,7 @@ function Discover() {
 
 
         {/* =================================================
-            COMMUNICATION + REAL AUDIO
+            COMMUNICATION + AUDIO
         ================================================== */}
 
         <section
@@ -713,8 +712,8 @@ function Discover() {
 
 
         {/* =================================================
-    FOOD & FEEDING
-================================================== */}
+             FOOD & FEEDING
+          ================================================== */}
 
         <section
           className="discover-coexistence"
@@ -771,17 +770,16 @@ function Discover() {
           </div>
         </section>
         {/* =================================================
-    CULTURE + CONSERVATION
-    Separate from coexistence
-================================================== */}
+            CULTURE + CONSERVATION
+           ================================================== */}
 
         <section className="discover-knowledge">
 
           <div className="discover-shell discover-knowledge__grid">
 
             {/* =================================================
-        CULTURE & HISTORY
-    ================================================== */}
+              CULTURE & HISTORY
+              ================================================== */}
 
             <article
               className="discover-knowledge-card"
@@ -827,8 +825,8 @@ function Discover() {
 
 
             {/* =================================================
-        CONSERVATION
-    ================================================== */}
+               CONSERVATION
+              ================================================== */}
 
             <article
               className="discover-knowledge-card discover-knowledge-card--dark"
@@ -878,8 +876,7 @@ function Discover() {
 
 
         {/* =================================================
-            SEPARATE CLOSING BANNER
-            No quote / handwritten text over image
+            CLOSING BANNER
         ================================================== */}
 
         <section
@@ -929,7 +926,6 @@ function Discover() {
 
       {/* ===================================================
           EXISTING FOOTER
-          No footer styling lives in Discover.css
       ==================================================== */}
 
       <HomeFooter />

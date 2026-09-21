@@ -247,7 +247,7 @@ function ElephantIndex() {
 
       <main className="elephant-index">
 
-        {/* HERO — APPROVED / LOCKED */}
+        {/* HERO  */}
         <section
           className="elephant-index-hero"
           style={{ backgroundImage: `url(${heroImage})` }}
