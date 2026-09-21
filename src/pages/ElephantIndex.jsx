@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Navbar from '../components/Navbar'
 import HomeFooter from '../components/HomeFooter'
@@ -316,11 +317,10 @@ function ElephantIndex() {
 
                   <button
                     type="button"
-                    className={`elephant-category ${
-                      activeCategory === category.id
+                    className={`elephant-category ${activeCategory === category.id
                         ? 'elephant-category--active'
                         : ''
-                    }`}
+                      }`}
                     onClick={() => setActiveCategory(category.id)}
                   >
                     <span className="elephant-category__icon">
@@ -405,11 +405,10 @@ function ElephantIndex() {
             >
               <button
                 type="button"
-                className={`elephant-directory__view-button ${
-                  viewMode === 'grid'
+                className={`elephant-directory__view-button ${viewMode === 'grid'
                     ? 'elephant-directory__view-button--active'
                     : ''
-                }`}
+                  }`}
                 onClick={() => setViewMode('grid')}
                 aria-label="Grid view"
                 title="Grid view"
@@ -424,11 +423,10 @@ function ElephantIndex() {
 
               <button
                 type="button"
-                className={`elephant-directory__view-button ${
-                  viewMode === 'list'
+                className={`elephant-directory__view-button ${viewMode === 'list'
                     ? 'elephant-directory__view-button--active'
                     : ''
-                }`}
+                  }`}
                 onClick={() => setViewMode('list')}
                 aria-label="List view"
                 title="List view"
@@ -449,11 +447,10 @@ function ElephantIndex() {
           {visibleElephants.length > 0 ? (
             <>
               <div
-                className={`elephant-cards ${
-                  viewMode === 'list'
+                className={`elephant-cards ${viewMode === 'list'
                     ? 'elephant-cards--list'
                     : ''
-                }`}
+                  }`}
               >
                 {visibleElephants.map((elephant) => {
                   const isSaved =
@@ -476,11 +473,10 @@ function ElephantIndex() {
 
                         <button
                           type="button"
-                          className={`elephant-card__heart ${
-                            isSaved
+                          className={`elephant-card__heart ${isSaved
                               ? 'elephant-card__heart--saved'
                               : ''
-                          }`}
+                            }`}
                           onClick={() =>
                             toggleSaved(elephant.id)
                           }
@@ -515,11 +511,10 @@ function ElephantIndex() {
                         </div>
 
                         <span
-                          className={`elephant-card__status elephant-card__status--${
-                            elephant.inMemory
+                          className={`elephant-card__status elephant-card__status--${elephant.inMemory
                               ? 'memory'
                               : elephant.type
-                          }`}
+                            }`}
                         >
                           {elephant.status}
                         </span>
@@ -528,14 +523,13 @@ function ElephantIndex() {
                           {elephant.description}
                         </p>
 
-                        <a
+                        <Link
                           className="elephant-card__link"
-                          href={`/elephants/${elephant.id}`}
+                          to={`/elephants/${elephant.id}`}
                         >
                           <span>View Profile</span>
                           <span aria-hidden="true">→</span>
-                        </a>
-
+                        </Link>
                       </div>
                     </article>
                   )
